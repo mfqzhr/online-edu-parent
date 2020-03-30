@@ -2,80 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="466afa6f-b16e-4667-91e8-165ba6820740" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-utils/common-utils.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-utils/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-utils/src/main/java/com/mfq/edu/commonutils/R.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-utils/src/main/java/com/mfq/edu/commonutils/ResultCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-utils/target/classes/com/mfq/edu/commonutils/R.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-utils/target/classes/com/mfq/edu/commonutils/ResultCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-base/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-base/src/main/java/com/mfq/edu/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-base/src/main/java/com/mfq/edu/config/handler/EduException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-base/src/main/java/com/mfq/edu/config/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-base/src/main/java/com/mfq/edu/config/handler/MyMetaObjectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-base/target/classes/com/mfq/edu/config/SwaggerConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-base/target/classes/com/mfq/edu/config/handler/EduException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-base/target/classes/com/mfq/edu/config/handler/GlobalExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/service-base/target/classes/com/mfq/edu/config/handler/MyMetaObjectHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaProjectsonline-edu-parent/info/log-info-2020-03-28.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaProjectsonline-edu-parent/log_error.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaProjectsonline-edu-parent/log_info.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaProjectsonline-edu-parent/log_warn.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaProjectsonline-edu-parent/warn/log-warn-2020-03-28.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/online-edu-parent.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/config/MPConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/controller/EduLoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/controller/TeacherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/entity/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/entity/vo/TeacherQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/mapper/TeacherMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/mapper/xml/TeacherMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/service/TeacherService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/java/com/mfq/edu/service/impl/TeacherServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/test/java/com/mfq/TestGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/src/test/java/com/mfq/excel/DemoData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/mfq/edu/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/mfq/edu/config/MPConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/mfq/edu/controller/EduLoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/mfq/edu/controller/TeacherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/mfq/edu/entity/Teacher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/mfq/edu/entity/vo/TeacherQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/mfq/edu/mapper/TeacherMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/mfq/edu/service/TeacherService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/com/mfq/edu/service/impl/TeacherServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/classes/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-edu/target/test-classes/com/mfq/TestGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/service-oss.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/src/main/java/com/mfq/edu/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/src/main/java/com/mfq/edu/ConstantPropertiesUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/src/main/java/com/mfq/edu/controller/OssController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/src/main/java/com/mfq/edu/service/OssService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/src/main/java/com/mfq/edu/service/impl/OssServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/target/classes/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/target/classes/com/mfq/edu/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/target/classes/com/mfq/edu/ConstantPropertiesUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/target/classes/com/mfq/edu/controller/OssController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/target/classes/com/mfq/edu/service/OssService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-oss/target/classes/com/mfq/edu/service/impl/OssServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,10 +146,22 @@
       <workItem from="1585370505994" duration="36790000" />
       <workItem from="1585533831685" duration="2694000" />
     </task>
+    <task id="LOCAL-00001" summary="讲师模块开发">
+      <created>1585540105228</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585540105228</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="讲师模块开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="讲师模块开发" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="70" key="#Notifications" timestamp="1585538880687">
@@ -237,10 +176,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="573" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585467300182" />
-    <state x="317" y="0" key="CommitChangelistDialog2" timestamp="1585538782654">
+    <state x="317" y="0" key="CommitChangelistDialog2" timestamp="1585540097184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="317" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585538782654" />
+    <state x="317" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585540097184" />
     <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1585539291805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -301,10 +240,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="269" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585371947427" />
-    <state x="360" y="131" key="Vcs.Push.Dialog.v2" timestamp="1585538806649">
+    <state x="360" y="131" key="Vcs.Push.Dialog.v2" timestamp="1585540123329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="360" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585538806649" />
+    <state x="360" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585540123329" />
     <state x="561" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585539515781">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
