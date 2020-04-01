@@ -21,9 +21,9 @@ import java.io.IOException;
  * @modified By：
  * @version: v1$
  */
-@RestController
-@RequestMapping("oss/ ")
 @CrossOrigin
+@RestController
+@RequestMapping("/oss/fileoss")
 @Api(tags = "阿里云OSS")
 public class OssController {
 

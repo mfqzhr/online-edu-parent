@@ -17,7 +17,7 @@ server:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath:com/mfq/mapper/*.xml # xml扫描路径
+  mapper-locations: classpath:com/mfq/edu/mapper/xml/*.xml # xml扫描路径
   global-config:
     db-config:
       logic-delete-value: 1
