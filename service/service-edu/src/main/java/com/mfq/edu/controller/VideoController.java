@@ -50,8 +50,8 @@ public class VideoController {
     @ApiOperation("根据ID查询小节")
     @GetMapping("{id}")
     public R getVideo(@PathVariable("id") String id) {
-        videoService.getById(id);
-        return R.ok();
+        Video video = videoService.getById(id);
+        return R.ok().data("video", video);
     }
 }
 

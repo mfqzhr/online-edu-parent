@@ -4,7 +4,7 @@ package com.mfq.edu.controller;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mfq.edu.commonutils.R;
 import com.mfq.edu.entity.Teacher;
-import com.mfq.edu.entity.vo.TeacherQuery;
+import com.mfq.edu.entity.TeacherQuery;
 import com.mfq.edu.service.TeacherService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

@@ -27,6 +27,14 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
     @Autowired
     private VideoService videoService;
 
+    @Override
+    public boolean removeByCourseId(String id) {
+        QueryWrapper<Chapter> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("course_id", id);
+        Integer count = baseMapper.delete(queryWrapper);
+        return null != count && count > 0;
+    }
+
     // 删除章节的方法
     // 如果章节有小节不能删除
     @Override

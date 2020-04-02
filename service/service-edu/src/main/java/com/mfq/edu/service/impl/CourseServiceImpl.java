@@ -1,16 +1,22 @@
 package com.mfq.edu.service.impl;
 
+import com.alibaba.excel.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mfq.edu.entity.Course;
 import com.mfq.edu.entity.CourseDescription;
+import com.mfq.edu.entity.CourseQuery;
 import com.mfq.edu.entity.vo.CourseInfoVo;
 import com.mfq.edu.entity.vo.CoursePublishVo;
 import com.mfq.edu.mapper.CourseMapper;
+import com.mfq.edu.service.ChapterService;
 import com.mfq.edu.service.CourseDescriptionService;
 import com.mfq.edu.service.CourseService;
+import com.mfq.edu.service.VideoService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.stereotype.Service;
 
 /**
@@ -29,6 +35,58 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     @Autowired
     private CourseMapper courseMapper;
+    @Autowired
+    private VideoService videoService;
+
+    @Autowired
+    private ChapterService chapterService;
+
+    @Override
+    public boolean removeCourseById(String id) {
+        //根据id删除所有视频
+        videoService.removeByCourseId(id);
+
+        //根据id删除所有章节
+        chapterService.removeByCourseId(id);
+
+        Integer result = baseMapper.deleteById(id);
+        return null != result && result > 0;
+    }
+
+    @Override
+    public void pageQuery(Page<Course> pageParam, CourseQuery courseQuery) {
+
+        QueryWrapper<Course> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("gmt_create");
+
+        if (courseQuery == null) {
+            baseMapper.selectPage(pageParam, queryWrapper);
+            return;
+        }
+
+        String title = courseQuery.getTitle();
+        String teacherId = courseQuery.getTeacherId();
+        String subjectParentId = courseQuery.getSubjectParentId();
+        String subjectId = courseQuery.getSubjectId();
+
+        if (!StringUtils.isEmpty(title)) {
+            queryWrapper.like("title", title);
+        }
+
+        if (!StringUtils.isEmpty(teacherId)) {
+            queryWrapper.eq("teacher_id", teacherId);
+        }
+
+        if (!StringUtils.isEmpty(subjectParentId)) {
+            queryWrapper.ge("subject_parent_id", subjectParentId);
+        }
+
+        if (!StringUtils.isEmpty(subjectId)) {
+            queryWrapper.ge("subject_id", subjectId);
+        }
+
+        baseMapper.selectPage(pageParam, queryWrapper);
+    }
 
     @Override
     public CoursePublishVo getPublishCourseInfo(String id) {

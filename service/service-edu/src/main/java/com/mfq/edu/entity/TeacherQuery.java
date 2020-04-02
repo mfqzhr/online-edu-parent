@@ -1,4 +1,4 @@
-package com.mfq.edu.entity.vo;
+package com.mfq.edu.entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mfq.edu.entity.Teacher;
-import com.mfq.edu.entity.vo.TeacherQuery;
+import com.mfq.edu.entity.TeacherQuery;
 import com.mfq.edu.mapper.TeacherMapper;
 import com.mfq.edu.service.TeacherService;
 import org.springframework.stereotype.Service;
