@@ -11,11 +11,13 @@ import com.mfq.edu.config.handler.EduException;
 import com.mfq.edu.service.VodService;
 import com.mfq.edu.utils.AliyunVodSDKUtils;
 import com.mfq.edu.utils.ConstantPropertiesUtils;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * @author ：穆繁强
@@ -47,6 +49,28 @@ public class VodServiceImpl implements VodService {
             e.printStackTrace();
         }
         return videoId;
+    }
+
+    /**
+     * 通过list集合删除视频
+     *
+     * @param ids
+     */
+    @Override
+    public void removeVideoByIds(List<String> ids) {
+        try {
+            DefaultAcsClient client = AliyunVodSDKUtils.initVodClient(
+                    ConstantPropertiesUtils.KEY_ID,
+                    ConstantPropertiesUtils.KEY_SECRET);
+            DeleteVideoRequest request = new DeleteVideoRequest();
+            String ids_str = StringUtils.join(ids, ",");
+            request.setVideoIds(ids_str);
+            DeleteVideoResponse response = client.getAcsResponse(request);
+            System.out.print("RequestId = " + response.getRequestId() + "\n");
+
+        } catch (ClientException e) {
+            throw new EduException(20001, "视频删除失败");
+        }
     }
 
     /**

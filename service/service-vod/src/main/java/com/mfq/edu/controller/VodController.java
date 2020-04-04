@@ -32,9 +32,10 @@ public class VodController {
         return R.ok().data("videoId", videoId);
     }
 
+    @ApiOperation("根据视频ID删除视频")
     @DeleteMapping("/remove/{videoId}")
     public R removeVideo(@ApiParam(name = "videoId", value = "云端视频id", required = true)
-                         @PathVariable String videoId){
+                         @PathVariable("videoId") String videoId) {
         vodService.removeVideo(videoId);
         return R.ok().message("视频删除成功");
     }

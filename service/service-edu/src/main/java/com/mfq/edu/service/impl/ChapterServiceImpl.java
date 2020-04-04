@@ -56,7 +56,6 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
                     .filter(video -> chapter.getId().equals(video.getChapterId())).collect(Collectors.toList());
             chapter.setChildren(videos);
         }
-
         return listChapter;
     }
 }

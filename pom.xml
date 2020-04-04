@@ -47,7 +47,6 @@
     <dependencyManagement>
         <dependencies>
 
-            <!--  &lt;!&ndash;Spring Cloud&ndash;&gt;
               <dependency>
                   <groupId>org.springframework.cloud</groupId>
                   <artifactId>spring-cloud-dependencies</artifactId>
@@ -62,7 +61,7 @@
                   <version>${cloud-alibaba.version}</version>
                   <type>pom</type>
                   <scope>import</scope>
-              </dependency>-->
+              </dependency>
             <!--mybatis-plus 持久层-->
             <dependency>
                 <groupId>com.baomidou</groupId>

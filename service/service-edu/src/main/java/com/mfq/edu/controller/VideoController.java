@@ -1,6 +1,8 @@
 package com.mfq.edu.controller;
 
 
+import com.alibaba.excel.util.StringUtils;
+import com.mfq.edu.client.VodClient;
 import com.mfq.edu.commonutils.R;
 import com.mfq.edu.entity.Video;
 import com.mfq.edu.service.VideoService;
@@ -8,6 +10,9 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -25,6 +30,9 @@ public class VideoController {
     @Autowired
     private VideoService videoService;
 
+    @Autowired
+    private VodClient vodClient;
+
     @ApiOperation("添加小节")
     @PostMapping
     public R addVideo(@RequestBody Video video) {
@@ -35,8 +43,20 @@ public class VideoController {
     @ApiOperation("删除小节")
     @DeleteMapping("{id}")
     public R deleteVideo(@PathVariable("id") String id) {
+        Video video = videoService.getById(id);
+        if (StringUtils.isEmpty(video.getVideoSourceId())) {
+            vodClient.removeVideo(video.getVideoSourceId());
+        }
         videoService.removeById(id);
         return R.ok();
+    }
+
+    @ApiOperation("批量删除小节")
+    @DeleteMapping("deleteBatch")
+    public R removeBatch(@RequestParam List<String> ids) {
+        List<String> stringList = videoService.listByIds(ids).stream().map(Video::getVideoSourceId).collect(Collectors.toList());
+        vodClient.removeBath(stringList);
+        return R.ok().message("删除成功");
     }
 
     @ApiOperation("修改小节")
