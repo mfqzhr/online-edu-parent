@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mfq.edu.entity.Course;
 import com.mfq.edu.entity.CourseDescription;
 import com.mfq.edu.entity.CourseQuery;
+import com.mfq.edu.entity.CourseQueryVo;
 import com.mfq.edu.entity.vo.CourseInfoVo;
 import com.mfq.edu.entity.vo.CoursePublishVo;
 import com.mfq.edu.mapper.CourseMapper;
@@ -16,8 +17,11 @@ import com.mfq.edu.service.CourseService;
 import com.mfq.edu.service.VideoService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -40,6 +44,51 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     @Autowired
     private ChapterService chapterService;
+
+    @Override
+    public Map<String, Object> pageListWeb(Page<Course> pageParam, CourseQueryVo courseQuery) {
+        QueryWrapper<Course> queryWrapper = new QueryWrapper<>();
+        if (!StringUtils.isEmpty(courseQuery.getSubjectParentId())) {
+            queryWrapper.eq("subject_parent_id", courseQuery.getSubjectParentId());
+        }
+
+        if (!StringUtils.isEmpty(courseQuery.getSubjectId())) {
+            queryWrapper.eq("subject_id", courseQuery.getSubjectId());
+        }
+
+        if (!StringUtils.isEmpty(courseQuery.getBuyCountSort())) {
+            queryWrapper.orderByDesc("buy_count");
+        }
+
+        if (!StringUtils.isEmpty(courseQuery.getGmtCreateSort())) {
+            queryWrapper.orderByDesc("gmt_create");
+        }
+
+        if (!StringUtils.isEmpty(courseQuery.getPriceSort())) {
+            queryWrapper.orderByDesc("price");
+        }
+
+        baseMapper.selectPage(pageParam, queryWrapper);
+
+        List<Course> records = pageParam.getRecords();
+        long current = pageParam.getCurrent();
+        long pages = pageParam.getPages();
+        long size = pageParam.getSize();
+        long total = pageParam.getTotal();
+        boolean hasNext = pageParam.hasNext();
+        boolean hasPrevious = pageParam.hasPrevious();
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("items", records);
+        map.put("current", current);
+        map.put("pages", pages);
+        map.put("size", size);
+        map.put("total", total);
+        map.put("hasNext", hasNext);
+        map.put("hasPrevious", hasPrevious);
+
+        return map;
+    }
 
     @Override
     public boolean removeCourseById(String id) {

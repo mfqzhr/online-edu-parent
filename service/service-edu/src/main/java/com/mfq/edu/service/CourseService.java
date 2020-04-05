@@ -4,8 +4,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.mfq.edu.entity.Course;
 import com.mfq.edu.entity.CourseQuery;
+import com.mfq.edu.entity.CourseQueryVo;
 import com.mfq.edu.entity.vo.CourseInfoVo;
 import com.mfq.edu.entity.vo.CoursePublishVo;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -28,4 +31,6 @@ public interface CourseService extends IService<Course> {
     void pageQuery(Page<Course> pageParam, CourseQuery courseQuery);
 
     boolean removeCourseById(String id);
+
+    Map<String, Object> pageListWeb(Page<Course> pageParam, CourseQueryVo courseQuery);
 }

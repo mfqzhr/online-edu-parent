@@ -26,7 +26,7 @@ public class TestGenerator {
 
         // 2、全局配置
         GlobalConfig gc = new GlobalConfig();
-        String projectPath = "E:\\javaProjects\\online-edu-parent\\service\\service-cms";
+        String projectPath = "E:\\javaProjects\\online-edu-parent\\service\\service-ucenter";
         System.out.println(projectPath);
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("穆繁强");
@@ -64,7 +64,7 @@ public class TestGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("crm_banner");
+        strategy.setInclude("ucenter_member");
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
 

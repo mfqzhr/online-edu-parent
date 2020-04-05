@@ -16,6 +16,8 @@
         <module>service-vod</module>
         <module>service-cms</module>
         <module>service-acl</module>
+        <module>service-msm</module>
+        <module>service-ucenter</module>
     </modules>
 
     <dependencies>
@@ -121,6 +123,11 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.2.5</version>
         </dependency>
     </dependencies>
     <!-- 项目打包时会将java目录中的*.xml文件也进行打包 -->
