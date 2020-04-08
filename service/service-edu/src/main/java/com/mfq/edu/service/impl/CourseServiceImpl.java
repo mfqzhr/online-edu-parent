@@ -10,6 +10,7 @@ import com.mfq.edu.entity.CourseQuery;
 import com.mfq.edu.entity.CourseQueryVo;
 import com.mfq.edu.entity.vo.CourseInfoVo;
 import com.mfq.edu.entity.vo.CoursePublishVo;
+import com.mfq.edu.entity.vo.CourseWebVo;
 import com.mfq.edu.mapper.CourseMapper;
 import com.mfq.edu.service.ChapterService;
 import com.mfq.edu.service.CourseDescriptionService;
@@ -44,6 +45,19 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     @Autowired
     private ChapterService chapterService;
+
+    @Override
+    public void updatePageViewCount(String id) {
+        Course course = baseMapper.selectById(id);
+        course.setViewCount(course.getViewCount() + 1);
+        baseMapper.updateById(course);
+    }
+
+    @Override
+    public CourseWebVo selectInfoWebById(String courseId) {
+        updatePageViewCount(courseId);
+        return courseMapper.selectInfoWebById(courseId);
+    }
 
     @Override
     public Map<String, Object> pageListWeb(Page<Course> pageParam, CourseQueryVo courseQuery) {

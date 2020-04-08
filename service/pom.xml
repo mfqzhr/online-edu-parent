@@ -18,6 +18,9 @@
         <module>service-acl</module>
         <module>service-msm</module>
         <module>service-ucenter</module>
+        <module>edo-comment</module>
+        <module>service-order</module>
+        <module>service-statisics</module>
     </modules>
 
     <dependencies>

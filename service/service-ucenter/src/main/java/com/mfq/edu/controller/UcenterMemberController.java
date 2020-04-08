@@ -6,12 +6,15 @@ import com.mfq.edu.commonutils.R;
 import com.mfq.edu.entity.UcenterMember;
 import com.mfq.edu.entity.vo.RegisterVo;
 import com.mfq.edu.service.UcenterMemberService;
+import com.mfq.edu.vo.UcenterMemberVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+
 
 /**
  * <p>
@@ -53,6 +56,15 @@ public class UcenterMemberController {
         // 查询数据库
         UcenterMember member = memberService.getById(id);
         return R.ok().data("userInfo", member);
+    }
+
+    //根据用户id获取用户信息
+    @PostMapping("getUserInfoOrder/{id}")
+    public UcenterMemberVo getUserInfoOrder(@PathVariable("id") String id) {
+        UcenterMember obj = memberService.getById(id);
+        UcenterMemberVo target = new UcenterMemberVo();
+        BeanUtils.copyProperties(obj, target);
+        return target;
     }
 }
 

@@ -1,7 +1,14 @@
 package com.mfq.edu.controller;
 
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.exceptions.ClientException;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthRequest;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthResponse;
 import com.mfq.edu.commonutils.R;
+import com.mfq.edu.config.handler.EduException;
 import com.mfq.edu.service.VodService;
+import com.mfq.edu.utils.AliyunVodSDKUtils;
+import com.mfq.edu.utils.ConstantPropertiesUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -38,5 +45,23 @@ public class VodController {
                          @PathVariable("videoId") String videoId) {
         vodService.removeVideo(videoId);
         return R.ok().message("视频删除成功");
+    }
+
+    @GetMapping("getPlayAuth/{id}")
+    public R getPlayAuth(@PathVariable("id") String id) {
+        try {
+            //创建初始化对象
+            DefaultAcsClient client = AliyunVodSDKUtils.initVodClient(ConstantPropertiesUtils.KEY_ID, ConstantPropertiesUtils.KEY_SECRET);
+            //创建凭证
+            GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
+            request.setVideoId(id);
+            //调用方法
+            GetVideoPlayAuthResponse res = client.getAcsResponse(request);
+            String playAuth = res.getPlayAuth();
+            System.out.println(res);
+            return R.ok().data("playAuth", playAuth);
+        } catch (EduException | ClientException e) {
+            throw new EduException(200001, "没有授权");
+        }
     }
 }

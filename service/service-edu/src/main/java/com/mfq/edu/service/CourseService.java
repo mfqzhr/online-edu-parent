@@ -7,6 +7,7 @@ import com.mfq.edu.entity.CourseQuery;
 import com.mfq.edu.entity.CourseQueryVo;
 import com.mfq.edu.entity.vo.CourseInfoVo;
 import com.mfq.edu.entity.vo.CoursePublishVo;
+import com.mfq.edu.entity.vo.CourseWebVo;
 
 import java.util.Map;
 
@@ -33,4 +34,12 @@ public interface CourseService extends IService<Course> {
     boolean removeCourseById(String id);
 
     Map<String, Object> pageListWeb(Page<Course> pageParam, CourseQueryVo courseQuery);
+
+    CourseWebVo selectInfoWebById(String courseId);
+
+    /**
+     * 更新课程浏览数
+     * @param id
+     */
+    void updatePageViewCount(String id);
 }
