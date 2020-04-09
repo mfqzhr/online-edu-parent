@@ -16,6 +16,7 @@
         <module name="service-ucenter" />
         <module name="service-acl" />
         <module name="service-base" />
+        <module name="api-gateway" />
         <module name="common-utils" />
         <module name="service-oss" />
       </profile>
@@ -26,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="common-utils" options="-parameters" />
       <module name="service" options="-parameters" />

@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="466afa6f-b16e-4667-91e8-165ba6820740" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/client/UcenterClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/schedule/ScheduleTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mfq/edu/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mfq/edu/filter/AuthGlobalFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mfq/edu/handler/ErrorHandlerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mfq/edu/handler/JsonExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javaProjectsonline-edu-parent/log_warn.log" beforeDir="false" afterPath="$PROJECT_DIR$/javaProjectsonline-edu-parent/log_warn.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/controller/StatisticsDailyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/controller/StatisticsDailyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/entity/StatisticsDaily.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/entity/StatisticsDaily.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/mapper/StatisticsDailyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/mapper/StatisticsDailyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/service/StatisticsDailyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/service/StatisticsDailyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/service/impl/StatisticsDailyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-statisics/src/main/java/com/mfq/edu/service/impl/StatisticsDailyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-ucenter/src/main/java/com/mfq/edu/controller/UcenterMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-ucenter/src/main/java/com/mfq/edu/controller/UcenterMemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +76,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/service/service-msm/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api-gateway/src/main/java/com/mfq/edu" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -101,13 +100,14 @@
       <recent name="com.mfq.edu.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\javaProjects\online-edu-parent\api-gateway\src\main\java\com\mfq\edu" />
       <recent name="E:\javaProjects\online-edu-parent\service\service-msm\src\main\resources" />
       <recent name="E:\javaProjects\online-edu-parent\common\common-utils\src\main\java\com\mfq\edu\commonutils" />
       <recent name="E:\javaProjects\online-edu-parent\service\service-cms\src\main\resources" />
       <recent name="E:\javaProjects\online-edu-parent\service\service-vod\src\test\java\com\mfq\edu" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.service-statistics">
+  <component name="RunManager" selected="Spring Boot.service-gateway">
     <configuration name="ScheduleTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mfq.edu.schedule.ScheduleTask" />
       <module name="service-statisics" />
@@ -150,16 +150,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="service-msm" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="service-msm" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="service-msm" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="service-order" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
-      <module name="service-order" />
+    <configuration name="service-gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="api-gateway" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.mfq.edu.*" />
@@ -167,6 +159,14 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mfq.edu.App" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="service-msm" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-msm" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="service-msm" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -201,20 +201,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ScheduleTask" />
       <item itemvalue="JUnit.TestGenerator" />
       <item itemvalue="Spring Boot.service-ucenter" />
       <item itemvalue="Spring Boot.service-edu" />
-      <item itemvalue="Spring Boot.service-order" />
       <item itemvalue="Spring Boot.service-statistics" />
-      <item itemvalue="Application.ScheduleTask" />
+      <item itemvalue="Spring Boot.service-gateway" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.service-gateway" />
         <item itemvalue="Spring Boot.service-statistics" />
         <item itemvalue="Application.ScheduleTask" />
         <item itemvalue="Spring Boot.service-ucenter" />
         <item itemvalue="JUnit.TestGenerator" />
-        <item itemvalue="Spring Boot.service-order" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +246,7 @@
       <workItem from="1585800933369" duration="4088000" />
       <workItem from="1585805101230" duration="26398000" />
       <workItem from="1585922997026" duration="28390000" />
-      <workItem from="1586063403337" duration="71165000" />
+      <workItem from="1586063403337" duration="74283000" />
     </task>
     <task id="LOCAL-00001" summary="讲师模块开发">
       <created>1585540105228</created>
@@ -304,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586349876347</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="课程统计分析模块">
+      <created>1586435625403</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586435625403</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +325,8 @@
     <MESSAGE value="首页面轮播图展现以及redis缓存首页" />
     <MESSAGE value="讲师详情以及课程详情页的开发" />
     <MESSAGE value="订单支付模块,由于缺少微信商家码,暂时跳过" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单支付模块,由于缺少微信商家码,暂时跳过" />
+    <MESSAGE value="课程统计分析模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="课程统计分析模块" />
   </component>
   <component name="WindowStateProjectService">
     <state x="399" y="43" key="#App" timestamp="1586101687230">
@@ -329,14 +337,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="360" y="70" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1585538880687" />
-    <state x="360" y="70" key="#Project_Structure" timestamp="1586226502248">
+    <state x="360" y="70" key="#Project_Structure" timestamp="1586437248709">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="360" y="70" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1586226502248" />
-    <state x="222" y="141" width="1092" height="616" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586400873390">
+    <state x="360" y="70" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1586437248709" />
+    <state x="222" y="141" width="1092" height="616" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586437098664">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="222" y="141" width="1092" height="616" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586400873390" />
+    <state x="222" y="141" width="1092" height="616" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586437098664" />
     <state x="573" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1586424533226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -349,10 +357,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586161265482" />
-    <state x="317" y="0" key="CommitChangelistDialog2" timestamp="1586349862184">
+    <state x="317" y="0" key="CommitChangelistDialog2" timestamp="1586435618531">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="317" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586349862184" />
+    <state x="317" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586435618531" />
     <state width="446" height="602" key="DebuggerActiveHint" timestamp="1585633943564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -369,38 +377,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="612" y="302" width="311" height="292" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1585539439097" />
-    <state width="1476" height="297" key="GridCell.Tab.0.bottom" timestamp="1586435573001">
+    <state width="1476" height="297" key="GridCell.Tab.0.bottom" timestamp="1586437326933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="297" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586435573001" />
-    <state width="1476" height="297" key="GridCell.Tab.0.center" timestamp="1586435573001">
+    <state width="1476" height="297" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586437326933" />
+    <state width="1476" height="297" key="GridCell.Tab.0.center" timestamp="1586437326932">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="297" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586435573001" />
-    <state width="1476" height="297" key="GridCell.Tab.0.left" timestamp="1586435573001">
+    <state width="1476" height="297" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586437326932" />
+    <state width="1476" height="297" key="GridCell.Tab.0.left" timestamp="1586437326931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="297" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586435573001" />
-    <state width="1476" height="297" key="GridCell.Tab.0.right" timestamp="1586435573001">
+    <state width="1476" height="297" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586437326931" />
+    <state width="1476" height="297" key="GridCell.Tab.0.right" timestamp="1586437326933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="297" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586435573001" />
-    <state width="1476" height="297" key="GridCell.Tab.1.bottom" timestamp="1586435573001">
+    <state width="1476" height="297" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586437326933" />
+    <state width="1476" height="297" key="GridCell.Tab.1.bottom" timestamp="1586437326934">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="297" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586435573001" />
-    <state width="1476" height="297" key="GridCell.Tab.1.center" timestamp="1586435573001">
+    <state width="1476" height="297" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586437326934" />
+    <state width="1476" height="297" key="GridCell.Tab.1.center" timestamp="1586437326933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="297" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586435573001" />
-    <state width="1476" height="297" key="GridCell.Tab.1.left" timestamp="1586435573001">
+    <state width="1476" height="297" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586437326933" />
+    <state width="1476" height="297" key="GridCell.Tab.1.left" timestamp="1586437326933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="297" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586435573001" />
-    <state width="1476" height="297" key="GridCell.Tab.1.right" timestamp="1586435573001">
+    <state width="1476" height="297" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586437326933" />
+    <state width="1476" height="297" key="GridCell.Tab.1.right" timestamp="1586437326933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="297" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586435573001" />
+    <state width="1476" height="297" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586437326933" />
     <state width="1476" height="430" key="GridCell.Tab.2.bottom" timestamp="1586329121626">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -425,14 +433,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="31" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1585742472178" />
-    <state x="269" y="0" key="SettingsEditor" timestamp="1586334736144">
+    <state x="269" y="0" key="SettingsEditor" timestamp="1586436003892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="269" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586334736144" />
-    <state x="360" y="131" key="Vcs.Push.Dialog.v2" timestamp="1586349880385">
+    <state x="269" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586436003892" />
+    <state x="360" y="131" key="Vcs.Push.Dialog.v2" timestamp="1586435643598">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="360" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586349880385" />
+    <state x="360" y="131" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586435643598" />
     <state x="561" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585540802749">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -453,10 +461,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="452" y="194" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1585539327724" />
-    <state x="177" y="0" key="new project wizard" timestamp="1586334684967">
+    <state x="177" y="0" key="new project wizard" timestamp="1586435982092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="177" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586334684967" />
+    <state x="177" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586435982092" />
     <state x="510" y="39" key="refactoring.ChangeSignatureDialog" timestamp="1586407704909">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -465,10 +473,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1586329151689" />
-    <state x="562" y="471" width="672" height="678" key="search.everywhere.popup" timestamp="1586328798612">
+    <state x="562" y="471" width="672" height="678" key="search.everywhere.popup" timestamp="1586436866822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="562" y="471" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586328798612" />
+    <state x="562" y="471" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586436866822" />
     <state x="598" y="203" key="svn.repositoryBrowser" timestamp="1585539384055">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
