@@ -2,6 +2,7 @@ package com.mfq.edu.mapper;
 
 import com.mfq.edu.entity.StatisticsDaily;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author 穆繁强
  * @since 2020-04-08
  */
+@Repository
 public interface StatisticsDailyMapper extends BaseMapper<StatisticsDaily> {
 
 }

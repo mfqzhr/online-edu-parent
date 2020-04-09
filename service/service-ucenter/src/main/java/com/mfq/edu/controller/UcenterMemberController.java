@@ -1,6 +1,7 @@
 package com.mfq.edu.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mfq.edu.commonutils.JwtUtils;
 import com.mfq.edu.commonutils.R;
 import com.mfq.edu.entity.UcenterMember;
@@ -66,5 +67,13 @@ public class UcenterMemberController {
         BeanUtils.copyProperties(obj, target);
         return target;
     }
+
+    // 查询某一天的注册人数
+    @GetMapping("countRegister/{day}")
+    public R countRegister(@PathVariable("day") String day) {
+        int count = memberService.count(new QueryWrapper<UcenterMember>().eq("gmt_create", day));
+        return R.ok().data("countRegister", count);
+    }
+
 }
 
