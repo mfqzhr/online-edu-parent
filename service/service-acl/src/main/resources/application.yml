@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: service-acl
+  profiles:
+    active: dev
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/edu_online?serverTimezone=GMT%2B8&characterEncoding=utf-8&useUnicode=true
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss # 配置时间格式
+    time-zone: GMT+8 # 配置时区
+server:
+  port: 7997
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/mfq/edu/mapper/xml/*.xml # xml扫描路径
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+feign:
+  hystrix:
+    enabled: true
+
