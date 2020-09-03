@@ -18,8 +18,8 @@
         <module name="spring-security" />
         <module name="service-base" />
         <module name="api-gateway" />
-        <module name="common-utils" />
         <module name="service-oss" />
+        <module name="common-utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
